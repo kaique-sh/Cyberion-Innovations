@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Laranja">#FFFF8C00</color>
     <color name="azul">#00008b</color>
+    <color name="button_background">#FF6200EE</color> <!-- Cor de fundo -->
+    <color name="button_text_color">#FFFFFF</color> <!-- Cor do texto -->
 
 </resources>

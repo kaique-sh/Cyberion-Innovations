@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".RegisterActivity">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CADASTRO"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Campo de E-mail -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <!-- Campo de Senha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <ImageButton
+            android:id="@+id/btnShowPassword"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="Mostrar Senha"/>
+    </LinearLayout>
+
+    <!-- Campo de Confirmação de Senha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <ImageButton
+            android:id="@+id/btnShowConfirmPassword"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="Mostrar Senha"/>
+    </LinearLayout>
+
+    <!-- Botão de Cadastro -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:backgroundTint="@color/azul"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"/>
+
+    <!-- Texto para Login -->
+    <TextView
+        android:id="@+id/tvGoToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Já tem uma conta? Login"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>
