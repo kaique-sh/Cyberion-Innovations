@@ -1,114 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
     android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".RegisterActivity">
 
-    <!-- Título -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CADASTRO"
-        android:textSize="26sp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/register_title"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_marginBottom="24dp"/>
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
-    <!-- Campo de E-mail -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:background="@android:drawable/editbox_background"
         android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"/>
+        android:textColorHint="@android:color/darker_gray"
+        android:autofillHints="emailAddress"/>
 
-    <!-- Campo de Senha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background"
+            android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:padding="12dp"
-            android:background="@android:drawable/editbox_background"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"/>
-
-        <ImageButton
-            android:id="@+id/btnShowPassword"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="?android:selectableItemBackground"
-            android:src="@android:drawable/ic_menu_view"
-            android:contentDescription="Mostrar Senha"/>
+            android:textColorHint="@android:color/darker_gray"
+            android:autofillHints="password"/>
     </LinearLayout>
 
-    <!-- Campo de Confirmação de Senha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/etConfirmPassword"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirmar Senha"
+            android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="12dp"
             android:background="@android:drawable/editbox_background"
             android:textColor="@android:color/white"
-            android:textColorHint="@android:color/darker_gray"/>
-
-        <ImageButton
-            android:id="@+id/btnShowConfirmPassword"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="?android:selectableItemBackground"
-            android:src="@android:drawable/ic_menu_view"
-            android:contentDescription="Mostrar Senha"/>
+            android:textColorHint="@android:color/darker_gray"
+            android:autofillHints="password"/>
     </LinearLayout>
 
-    <!-- Botão de Cadastro -->
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:backgroundTint="@color/azul"
-        android:textColor="@android:color/white"
         android:layout_marginTop="20dp"
-        android:padding="12dp"/>
+        android:backgroundTint="@color/azul"
+        android:padding="12dp"
+        android:text="@string/btn_register"
+        android:textColor="@android:color/white" />
 
-    <!-- Texto para Login -->
     <TextView
         android:id="@+id/tvGoToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Já tem uma conta? Login"
-        android:textColor="@android:color/holo_blue_light"
         android:layout_marginTop="12dp"
-        android:padding="12dp"
         android:clickable="true"
-        android:focusable="true"/>
-
+        android:focusable="true"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="16dp"
+        android:text="@string/go_to_login"
+        android:textColor="@android:color/holo_blue_light" />
 </LinearLayout>

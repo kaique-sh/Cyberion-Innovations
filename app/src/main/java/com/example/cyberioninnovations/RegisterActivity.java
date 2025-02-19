@@ -2,20 +2,14 @@ package com.example.cyberioninnovations;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterActivity extends AppCompatActivity {
-
-    private boolean isPasswordVisible = false;
-    private boolean isConfirmPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,30 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
         EditText etPassword = findViewById(R.id.etPassword);
         EditText etConfirmPassword = findViewById(R.id.etConfirmPassword);
         Button btnRegister = findViewById(R.id.btnRegister);
-        ImageButton btnShowPassword = findViewById(R.id.btnShowPassword);
-        ImageButton btnShowConfirmPassword = findViewById(R.id.btnShowConfirmPassword);
         TextView tvGoToLogin = findViewById(R.id.tvGoToLogin);
-
-        // Alternar visibilidade da senha
-        btnShowPassword.setOnClickListener(view -> {
-            isPasswordVisible = !isPasswordVisible;
-            if (isPasswordVisible) {
-                etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            } else {
-                etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-            etPassword.setSelection(etPassword.getText().length()); // Mantém o cursor no final
-        });
-
-        btnShowConfirmPassword.setOnClickListener(view -> {
-            isConfirmPasswordVisible = !isConfirmPasswordVisible;
-            if (isConfirmPasswordVisible) {
-                etConfirmPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            } else {
-                etConfirmPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-            etConfirmPassword.setSelection(etConfirmPassword.getText().length()); // Mantém o cursor no final
-        });
 
         // Lógica de cadastro
         btnRegister.setOnClickListener(view -> {

@@ -2,19 +2,14 @@ package com.example.cyberioninnovations;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
-
-    private boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +19,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText etEmail = findViewById(R.id.etEmail);
         EditText etPassword = findViewById(R.id.etPassword);
         Button btnLogin = findViewById(R.id.btnLogin);
-        ImageButton btnShowPassword = findViewById(R.id.btnShowPassword);
         TextView tvGoToRegister = findViewById(R.id.tvGoToRegister);
-
-        // Alternar visibilidade da senha
-        btnShowPassword.setOnClickListener(view -> {
-            isPasswordVisible = !isPasswordVisible;
-            if (isPasswordVisible) {
-                etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            } else {
-                etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-            etPassword.setSelection(etPassword.getText().length()); // Mantém o cursor no final
-        });
 
         // Lógica de login
         btnLogin.setOnClickListener(view -> {
